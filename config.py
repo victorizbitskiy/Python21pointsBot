@@ -1,4 +1,4 @@
-TOKEN = '1486784403:AAGskDwDe9QQgCucPrU-fTBL-NCncNlfAWQ'  # bot token
+TOKEN_21 = 'YOUR_TOKEN'  # bot token
 
 all_carts = {'static/2_heart.png': 2,
              'static/2_diamond.png': 2,

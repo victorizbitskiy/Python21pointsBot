@@ -1,11 +1,20 @@
 import telebot
 import config
+import os
 
 from telebot import types
 from dbhelp import DBHelp
 from process import Process
 
-bot = telebot.TeleBot(config.TOKEN)
+# if local server
+# bot = telebot.TeleBot(config.TOKEN_21)
+
+# if heroku
+# when deploying the app run this command:
+# heroku config:set TOKEN_21=YOUR_TOKEN
+token = os.environ['TOKEN_21']
+bot = telebot.TeleBot(token)
+
 db = DBHelp()
 db.setup()
 process = Process(bot, db)
