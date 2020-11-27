@@ -63,7 +63,7 @@ class Process:
                                       "Я проиграл.\nУ меня {0}. У вас {1}".format(int(points_bot), int(points_user)))
                 self.db.delete_item(chat_id)
 
-            if points_bot > points_user:
+            if points_user < points_bot <= 21:
                 self.bot.send_message(chat_id,
                                       "Я победил!\nУ меня {0}. У вас {1}".format(int(points_bot), int(points_user)))
                 self.bot.send_message(chat_id, 'Не растраивайтесь. Попробуйте ещё раз.')
